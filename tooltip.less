@@ -1,0 +1,102 @@
+	.tooltip_templates { 
+		display: none; 
+	}
+
+	.toogle {
+		width: 3.5em;
+		cursor: pointer;
+		
+		.icons {
+			display: inline;
+	
+			i {
+				padding: 0.5em;
+			}
+		}
+	
+        &[view='list']{
+            .icons {
+				.fa-list {
+					display: inline-block;
+				}
+				.fa-th-large {
+					display: none;
+				}			
+			}
+        }
+
+        &[view='table']{
+            .icons {
+                .fa-list {
+                    display: none;
+                }
+                .fa-th-large {
+                    display: inline-block;
+                }			
+            }
+        }        
+    }    
+    
+
+    #tooltip_view_content {
+
+        .table {
+    
+            display: table;
+            width: 12.5em;
+    
+            .row {
+                display: table-row;
+    
+                .check {
+                    width: 2.5em;				
+                }
+                .text {
+                    width: 7.5em;
+                }
+                .view {
+                    width: 2.5em;
+                }
+    
+                div {
+                    display: table-cell;
+                    padding: 0.5em;
+                    vertical-align: middle;
+                }
+            }
+        }	
+        
+        .listChoice {
+            cursor: pointer;
+            padding: 0.5em;
+        }
+        
+        .tableChoice {
+            cursor: pointer;
+            padding: 0.5em;
+        }
+    
+        &[view='list'] {
+            .listChoice {			
+                color: blue;
+            }
+            .tableChoice {
+                color: inherit;
+                .check {
+                    color: #ededed;
+                }
+            }
+        }
+    
+        &[view='table'] {
+            .listChoice {
+                color: inherit;
+                .check {
+                    color: #ededed;
+                }
+            }
+            .tableChoice {
+                color: blue;
+            }
+        }
+    }
